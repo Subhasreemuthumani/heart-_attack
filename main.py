@@ -20,10 +20,10 @@ st.markdown(
 @st.cache_data
 def load_and_train_model():
     # Load dataset directly from GitHub (heart.csv from a reliable source)
-    url = "https://raw.githubusercontent.com/plotly/datasets/master/heart.csv"
-    data = pd.read_csv(url)
+  
+    data = pd.read_csv("heart_attack_prediction_dataset.csv")
 
-    # Split features and target variable
+    # Sp'lit features and target variable
     X = data.drop('target', axis=1)
     y = data['target']
 
